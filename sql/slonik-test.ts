@@ -6,7 +6,7 @@ import {
   const pool = createPool('postgresql://root@localhost:26257/defaultdb?sslmode=disable');
   
   void (async () => {
-    const user = 'ankit@oslash.com' as const
+    const user = 'hey@example.com' as const
     const result = await pool.query(sql`
     SELECT DISTINCT s.shortlink, c.name as collection_name, s.url, s.description, s.tags, s.is_shared_with_web, s.is_variable, s.id AS shortcut_id, c.id AS collection_id FROM shortcuts AS s
     LEFT JOIN collections AS c ON s.collection_id = c.id
