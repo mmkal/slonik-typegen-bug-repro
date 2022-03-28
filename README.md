@@ -1,5 +1,7 @@
 # `@slonik/typegen` Bug Reproduction
 
+> See https://github.com/mmkal/slonik-tools/issues/379 for the original issue.
+
 1. Install CockroachDB (see See https://www.cockroachlabs.com/docs/v21.2/install-cockroachdb-mac.html)
 
 ```
