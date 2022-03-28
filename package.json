@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@slonik/typegen": "0.11.3",
+    "slonik": "28.0.0"
+  },
+  "devDependencies": {
+    "prettier": "2.6.1",
+    "ts-node": "10.7.0",
+    "typescript": "4.6.3"
+  },
+  "scripts": {
+    "typegen": "npx slonik-typegen generate --root-dir sql/ --connection-uri \"postgresql://root@localhost:26257/defaultdb?sslmode=disable\" --skip-check-clean"
+  }
+}
