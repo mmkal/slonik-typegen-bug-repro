@@ -12,7 +12,15 @@ brew install cockroachdb/tap/cockroach
 cockroach start-single-node --insecure --listen-addr=localhost --accept-sql-without-tls
 ```
 
-3. Clone this repo, install all dependencies and run the type-generator –
+3. If you don't have PostgreSQL installed already (specifically for using the `psql` tool) –
+
+```
+brew install libpq
+echo 'export PATH="/opt/homebrew/opt/libpq/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+4. Clone this repo, install all dependencies and run the type-generator –
 
 ```
 git clone git@github.com:paambaati/slonik-typegen-bug-repro.git
@@ -20,7 +28,7 @@ npm i
 npm run typegen
 ```
 
-4. See error –
+5. See error –
 
 ```
 Using default pool config - type parsers will not be respected.
