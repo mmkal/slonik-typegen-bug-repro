@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@slonik/typegen": "0.11.3",
+    "@slonik/typegen": "0.12.1",
     "slonik": "28.0.0"
   },
   "devDependencies": {
@@ -9,6 +9,6 @@
     "typescript": "4.6.3"
   },
   "scripts": {
-    "typegen": "npx slonik-typegen generate --root-dir sql/ --connection-uri \"postgresql://root@localhost:26257/defaultdb?sslmode=disable\" --skip-check-clean"
+    "typegen": "npx slonik-typegen generate --root-dir sql/ --connection-uri \"postgresql://postgres:postgres@localhost:26257/postgres?sslmode=disable\" --skip-check-clean --psql \"docker-compose exec -T postgres psql -h localhost -U postgres postgres\""
   }
 }
